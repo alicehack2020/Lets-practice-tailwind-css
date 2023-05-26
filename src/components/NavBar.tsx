@@ -26,13 +26,12 @@ const NavBar = () => {
 
     const [open,setOpen]=useState(false)
   return (
-      <div className="flex justify-between p-3 relative">
-          <div className='p-3'>
-              <img src="https://practice-react-landing-page.netlify.app/assets/logo-4096a4dd.svg" alt="" />
-          </div>
+      <div className="flex justify-between p-3 relative ml-10">
+          <div>
+              <h1 className='text-green-600 font-semibold text-3xl'>Practice</h1>          </div>
  
           <div className={open?'absolute top-16 bg-white w-full p-5':'hidden md:flex items-cente w-full justify-evenly'}>
-              <ul className={open?'flex  flex-col':'flex gap-4 pt-4'}>
+              <ul className={open?'flex  flex-col':'flex gap-4 pt-4 '}>
                   {
                       navData.map((e, index) => {
                           return <>
@@ -56,7 +55,7 @@ const NavBar = () => {
           
           
           
-          {open===true?<div className='p-4 mr-6 md:hidden' onClick={() => { setOpen(false) }}>
+          {open===true?<div className='p-4 mr-6' onClick={() => { setOpen(false) }}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
